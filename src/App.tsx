@@ -2,6 +2,7 @@ import React from 'react';
 import { AppContainer } from './styles';
 import { Column } from "./components/Column";
 import { Card } from "./components/Card";
+import {AddNewItem} from "./components/AddNewItem";
 
 function App(): JSX.Element {
   return (
@@ -15,6 +16,10 @@ function App(): JSX.Element {
         <Column text='C#'>
             <Card text='Namespace' />
         </Column>
+        <AddNewItem
+            onAdd={() => console.log('added')}
+            toggleButtonText={'+ Add a new item '}
+        />
     </AppContainer>
   );
 }
